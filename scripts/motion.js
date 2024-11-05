@@ -58,12 +58,3 @@ gallery.forEach(img => {
 })
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const textBoxes = document.querySelectorAll('.text-box');
-    textBoxes.forEach((box, index) => {
-        setTimeout(() => {
-            box.classList.add('visible'); 
-        }, index * 200); 
-   
-    });
-});
