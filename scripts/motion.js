@@ -1,11 +1,11 @@
-// Select only images with the .gallery-img class
+
 const gallery = gsap.utils.toArray('.gallery-img')
 
 gsap.set('.gallery-img', {
     clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)'
 })
 
-// Set up the ScrollTrigger only for the gallery section
+
 const tl = gsap.timeline({
     scrollTrigger: {
         trigger: 'section.gallery',
@@ -18,7 +18,7 @@ const tl = gsap.timeline({
     }
 })
 
-// Define animations within the timeline for gallery items
+
 tl
     .from('li', {
         y: -100,
@@ -38,7 +38,7 @@ tl
         stagger: 0.1
     }, '-=.5')
 
-// Apply mouseenter and mouseleave events to each gallery image
+
 gallery.forEach(img => {
     let p = img.closest('a').querySelector('p')
     let originalText = p.innerText  

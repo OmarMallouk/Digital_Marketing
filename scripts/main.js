@@ -11,27 +11,26 @@ document.addEventListener("DOMContentLoaded", () => {
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Animate the left image
+
     gsap.from(".left-image", {
         scrollTrigger: {
-            trigger: ".partner-section", // Trigger when the section comes into view
-            start: "top 80%", // Start the animation when the top of the section hits 80% of the viewport height
-            toggleActions: "play none none reverse" // Play the animation on entering and reverse on leaving
+            trigger: ".partner-section", 
+            start: "top 80%", 
+            toggleActions: "play none none reverse" 
         },
-        x: -100, // Move from the left (out of view)
-        opacity: 0, // Start invisible
-        duration: 1 // Duration of the animation
+        x: -100, 
+        opacity: 0, 
+        duration: 1 
     });
 
-    // Animate the right image
     gsap.from(".right-image", {
         scrollTrigger: {
             trigger: ".partner-section",
             start: "top 80%",
             toggleActions: "play none none reverse"
         },
-        x: 100, // Move from the right (out of view)
-        opacity: 0, // Start invisible
-        duration: 1 // Duration of the animation
+        x: 100, 
+        opacity: 0, 
+        duration: 1 
     });
 });
