@@ -24,6 +24,7 @@
     width: 100%; 
     max-width: 1200px; 
     margin: 0 auto; 
+    flex-wrap: wrap;
     
 }
 
@@ -33,6 +34,7 @@
     display: flex; 
     flex-direction: column; 
     gap: 40px; 
+    box-sizing: border-box;
 }
 
 .left-column {
@@ -42,6 +44,15 @@
 .right-column {
     margin-left: 60px; 
 }
+
+@media (max-width: 768px) {
+    .left-column, .right-column {
+        flex: 100%; /*to stack vertically */
+        margin-right: 0; 
+        margin-left: 0; 
+    }
+}
+
 
 .text-box {
     padding: 20px; 
@@ -55,6 +66,9 @@
     opacity: 0; 
     transform: translateY(20px); 
     transition: opacity 0.5s ease, transform 0.5s ease; 
+    width: 100%; 
+    max-width: 500px;
+    overflow: hidden; 
 }
 
 .text-box.visible {
