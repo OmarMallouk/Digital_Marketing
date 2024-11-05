@@ -1,4 +1,4 @@
-.partner-title{
+.partner-title {
     text-decoration: none;
     transition: color 0.3s;
     text-align: center;
@@ -6,17 +6,14 @@
     font-weight: bold;
     color: #00c6ff; 
     font-size: 1rem; 
-    font-weight: bold; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
 
-
-.partner-section{
+.partner-section {
     padding: 40px; 
     background-color: #fff; 
 }
-
 
 .partner-container {
     display: flex;
@@ -26,20 +23,20 @@
     margin: 0 auto; 
 }
 
-.partner-section .left-image{
-    height: 90vh;
-    margin-right: 80px; 
-}
-
-.partner-section .right-image{
-    height: 90vh;
-    margin-left: 80px; 
-}
-
 .left-image, .right-image {
     max-width: 40%; 
     height: auto; 
     border-radius: 20px;
+}
+
+.left-image {
+    margin-right: 80px; 
+    height: 60vh;
+}
+
+.right-image {
+    margin-left: 80px; 
+    height: 60vh;
 }
 
 .texts-content {
@@ -49,7 +46,7 @@
     width: 100%;
 }
 
-.partner-section .texts-content>h2 {
+.partner-section .texts-content > h2 {
     text-decoration: none;
     transition: color 0.3s;
     text-align: center;
@@ -57,31 +54,167 @@
     font-weight: bold;
     color: #00c6ff; 
     font-size: 2rem; 
-    font-weight: bold; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
 }
 
-.partner-section .texts-content>p {
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    text-align:center;
+.partner-section .texts-content > p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
     font-size: 1.2rem; 
     color: #333;
     line-height: 1.6;
     width: 100%;
 }
 
-
 @media (max-width: 768px) {
-    .big-div-container {
+    .partner-container {
         flex-direction: column; 
         align-items: center; 
+        text-align: center;
     }
 
     .left-image, .right-image {
         max-width: 80%; 
         margin: 20px 0; 
-        
+    }
+
+    .texts-content {
+        padding: 0 10px; 
+    }
+
+    .partner-section .texts-content > h2 {
+        font-size: 1.5rem; 
+    }
+
+    .partner-section .texts-content > p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .partner-section {
+        padding: 20px; 
+    }
+
+    .left-image, .right-image {
+        max-width: 100%; 
+        margin: 10px 0; 
+    }
+
+    .partner-section .texts-content > h2 {
+        font-size: 1.2rem; 
+    }
+
+    .partner-section .texts-content > p {
+        font-size: 0.9rem;
+    }
+}
+
+.mythology{
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: center;
+    font-family: 'Arial', sans-serif; 
+    font-weight: bold;
+    color: #00c6ff; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.fade-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    min-height: 60vh;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.fade-text {
+    width: 40%;
+    opacity: 0; 
+    transform: translateX(-50px); 
+}
+
+.fade-text>h1 {
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: start;
+    font-family: 'Arial', sans-serif; 
+    font-weight: bold;
+    color: #00c6ff; 
+    font-size: 2rem; 
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fade-text>p {
+    font-size: 1.2rem; 
+    color: #333; 
+    line-height: 1.6; 
+    margin: 0; 
+}
+
+
+.fade-image {
+    width: 40%;
+    opacity: 0;
+    transform: translateX(50px); 
+}
+
+.fade-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .fade-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .fade-text, .fade-image {
+        width: 100%;
+        margin-bottom: 20px;
+        transform: none; 
+    }
+
+    .fade-text {
+        transform: translateY(-20px); 
+    }
+
+    .fade-image {
+        transform: translateY(20px); 
+    }
+
+    .fade-text > h1 {
+        font-size: 1.5rem;
+    }
+
+    .fade-text > p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .fade-section {
+        padding: 20px;
+    }
+
+    .fade-text > h1 {
+        font-size: 1.2rem;
+    }
+
+    .fade-text > p {
+        font-size: 0.9rem;
     }
 }
 

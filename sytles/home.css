@@ -12,98 +12,165 @@
 body{
     background-color: #fffefef1;
 }
-
-
-.navbar{
+.navbar {
   background: white; 
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; 
 }
 
 .navbar .logo {
-    height: 100px;
+  height: 60px; 
+}
+
+.navbar img {
+  width: auto; 
+  max-width: 100%; 
+  height: 100%; 
+  border-radius: 20px;
+  padding: 5px;
+  background: linear-gradient(90deg, #4cd2f7, #e1e7f0);
+}
+
+.navbar h1 {
+  margin: 0 20px; 
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  text-align: center;
+  font-family: 'Arial', sans-serif; 
+  color: #00c6ff; 
+  font-size: 1.5rem; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-txt {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; 
+  color: #00c6ff; 
+  font-size: 15px; 
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-txt > button {
+  padding: 10px 12px; 
+  background-color: #4c99e0; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  height: 40px;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column; 
+      align-items: center; 
   }
 
-.navbar img{
-    width: 120%;
-    height: 100%;
-    border-radius: 20px;
-    padding: 15px;
-    background: linear-gradient(90deg, #00c6ff, #0072ff);
-    flex-wrap: wrap;
-}
+  .navbar .logo {
+      height: 50px; 
+  }
 
-.navbar h1{
-    width: 100%;
-    margin-top: 30px;
-    margin-right: 100px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-    text-align: center;
-    font-family: 'Arial', sans-serif; 
-    font-weight: bold;
-    color: #00c6ff; 
-    font-size: 2rem; 
-    font-weight: bold;
-     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
+  .navbar h1 {
+      margin: 10px 0;
+      font-size: 1.2rem; 
+      text-align: center; 
+  }
 
-.navbar .nav-txt{
-    display: flex;
-    justify-content: space-between;
-    /* padding: 10px 15px;  */
-    color: #00c6ff; 
-    font-size: 15px; 
-    width: 12%;
-    font-weight: bold;
-     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
-.navbar .nav-txt>button{
-    padding: 10px 12px; 
-    background-color: #4c99e0; 
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    height: 40px;
+  .nav-txt {
+      width: 100%; 
+      justify-content: center; 
+      margin: 10px 0; 
+  }
 
+  .nav-txt > button {
+      width: auto; 
+      margin: 5px;
+      font-size: 14px; 
+  }
 }
-
 
 .wrapper {
-    height: 20%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    perspective: 10px;
-  }
+  height: 20%;
+  overflow-y: scroll; 
+  overflow-x: hidden;
+  perspective: 10px;
+  scrollbar-width: none;
+}
 
-  header {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40vh;
-    width: 100vw;
-    transform-style: preserve-3d;
-    z-index: -1;
-  }
-  
-  .background{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    transform: translateZ(-10px) scale(2);
-    z-index: -1;
-  }
-  
-  .title {
-    font-size: 3rem;
-    color: white;
-    text-shadow: 0 0 5px black;;
-  }
+.wrapper::-webkit-scrollbar {
+  display: none; 
+}
 
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  width: 100vw;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: translateZ(-10px) scale(2);
+  z-index: -1;
+}
+
+.title {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+
+
+  .site-footer {
+    margin-top: 30px;
+    background-color: #fff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    height: 20vh;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #00c6ff;
+}
+
+.footer-column p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    color: black;
+}
+
+.footer-column a {
+    color: #00c6ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #00a3cc;
+}
